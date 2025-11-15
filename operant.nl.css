@@ -151,9 +151,9 @@ body::before {
 }
 
 .hero-image img {
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 8px 12px 30px rgba(0, 0, 0, 0.12), 3px 5px 15px rgba(0, 0, 0, 0.08);
   filter: sepia(15%) contrast(1.05);
   user-select: none;
   -webkit-user-select: none;
@@ -184,7 +184,7 @@ body::before {
 .section-visual img {
     max-width: 400px;
   border-radius: 6px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 6px 8px 30px rgba(0, 0, 0, 0.12), 2px 4px 15px rgba(0, 0, 0, 0.08);
   filter: sepia(25%) contrast(1.05);
   user-select: none;
   -webkit-user-select: none;
