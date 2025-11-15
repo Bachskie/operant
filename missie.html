@@ -32,7 +32,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero fade-in">
+    <section class="hero">
       <div class="hero-content">
         <h1>Hoe We Het Doen</h1>
         <p>
@@ -40,13 +40,13 @@
           en gebruiken die data om de resultaten te bereiken waar jij op rekent.
         </p>
       </div>
-      <div class="hero-image" data-parallax>
+      <div class="hero-image">
         <img src="2.jpg" alt="Hoe We Het Doen" />
       </div>
     </section>
 
     <!-- MISSIE DETAILS -->
-    <section class="section slide-up">
+    <section class="section">
       <div class="section-text">
         <h2>De Drie Stappen</h2>
         <p>
@@ -58,7 +58,7 @@
     </section>
 
     <!-- DETAILS SECTION -->
-    <section class="section reverse fade-in">
+    <section class="section reverse">
       <div class="section-text">
         <h2>Waarom Dit Werkt</h2>
         <p>
@@ -80,30 +80,12 @@
       // Update year
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Scroll animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      }, { threshold: 0.2 });
-      document.querySelectorAll(".fade-in, .slide-up").forEach((el) => observer.observe(el));
-
       // Scroll progress bar
       window.addEventListener("scroll", () => {
         const scrollTop = document.documentElement.scrollTop;
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = (scrollTop / scrollHeight) * 100;
         document.getElementById("scroll-bar").style.width = progress + "%";
-      });
-
-      // Parallax effect
-      window.addEventListener("scroll", () => {
-        const parallaxEls = document.querySelectorAll("[data-parallax]");
-        parallaxEls.forEach(el => {
-          const speed = 0.15;
-          const offset = window.pageYOffset * speed;
-          el.style.transform = `translateY(${offset}px)`;
-        });
       });
 
       // Protect images from downloading

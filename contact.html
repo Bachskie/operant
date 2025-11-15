@@ -32,20 +32,20 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero fade-in">
+    <section class="hero">
       <div class="hero-content">
         <h1>Laten We Spreken</h1>
         <p>
           Wil je je organisatie echt veranderen? Dan praten we erover hoe Operant dat kan doen.
         </p>
       </div>
-      <div class="hero-image" data-parallax>
+      <div class="hero-image">
         <img src="4.jpg" alt="Laten We Spreken" />
       </div>
     </section>
 
     <!-- CONTACT FORM -->
-    <section class="cta slide-up">
+    <section class="cta">
       <h2>Neem Contact Met Ons Op</h2>
       <p>
         Deel je gegevens en we nemen contact op. Laten we bespreken hoe we jouw uitdagingen kunnen aanpakken.
@@ -62,7 +62,7 @@
     </section>
 
     <!-- CONTACT INFO -->
-    <section class="section slide-up">
+    <section class="section">
       <div class="section-text">
         <h2>Direct Contact</h2>
         <p>
@@ -84,30 +84,12 @@
       // Update year
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Scroll animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      }, { threshold: 0.2 });
-      document.querySelectorAll(".fade-in, .slide-up").forEach((el) => observer.observe(el));
-
       // Scroll progress bar
       window.addEventListener("scroll", () => {
         const scrollTop = document.documentElement.scrollTop;
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = (scrollTop / scrollHeight) * 100;
         document.getElementById("scroll-bar").style.width = progress + "%";
-      });
-
-      // Parallax effect
-      window.addEventListener("scroll", () => {
-        const parallaxEls = document.querySelectorAll("[data-parallax]");
-        parallaxEls.forEach(el => {
-          const speed = 0.15;
-          const offset = window.pageYOffset * speed;
-          el.style.transform = `translateY(${offset}px)`;
-        });
       });
 
       // Contact form handler

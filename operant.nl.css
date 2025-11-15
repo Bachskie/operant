@@ -148,7 +148,6 @@ body::before {
 .hero-image {
   overflow: hidden;
   border-radius: 8px;
-  will-change: transform;
 }
 
 .hero-image img {
@@ -156,7 +155,6 @@ body::before {
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   filter: sepia(15%) contrast(1.05);
-  transition: transform 0.4s ease;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -260,18 +258,6 @@ body::before {
 .footer a {
   color: #a27d46;
   text-decoration: none;
-}
-
-/* ANIMATIONS */
-.fade-in, .slide-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* RESPONSIVE */

@@ -31,7 +31,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero fade-in">
+    <section class="hero">
       <div class="hero-content">
         <h1>Behaviour to Data
           Data to Behaviour
@@ -44,13 +44,13 @@
           Meld je aan voor de wachtlijst
         </button>
       </div>
-      <div class="hero-image" data-parallax>
+      <div class="hero-image">
         <img src="1.jpg" alt="Behavioral science and AI" />
       </div>
     </section>
 
     <!-- MISSIE -->
-    <section id="mission" class="section slide-up">
+    <section id="mission" class="section">
       <div class="section-text">
         <h2>Hoe We Het Doen</h2>
         <p>
@@ -62,7 +62,7 @@
     </section>
 
     <!-- WETENSCHAP -->
-    <section id="science" class="section reverse fade-in">
+    <section id="science" class="section reverse">
       <div class="section-text">
         <h2>De Cirkel: Meet, Leer, Verbeter</h2>
         <p>
@@ -77,7 +77,7 @@
     </section>
 
     <!-- CTA / AANMELDINGSFORMULIER -->
-    <section id="signup" class="cta slide-up">
+    <section id="signup" class="cta">
       <h2>Klaar om je Organisatie Anders Te Sturen?</h2>
       <p>
         Ontvang praktische inzichten en tools om gedrag te begrijpen en resultaten te verbeteren.
@@ -103,14 +103,6 @@
       // Update year
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Scroll animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      }, { threshold: 0.2 });
-      document.querySelectorAll(".fade-in, .slide-up").forEach((el) => observer.observe(el));
-
       // Scroll progress bar
       window.addEventListener("scroll", () => {
         const scrollTop = document.documentElement.scrollTop;
@@ -119,17 +111,7 @@
         document.getElementById("scroll-bar").style.width = progress + "%";
       });
 
-      // Parallax effect
-      window.addEventListener("scroll", () => {
-        const parallaxEls = document.querySelectorAll("[data-parallax]");
-        parallaxEls.forEach(el => {
-          const speed = 0.15;
-          const offset = window.pageYOffset * speed;
-          el.style.transform = `translateY(${offset}px)`;
-        });
-      });
-
-      // Aanmeldingsformulier mock handler (verbindbaar met API)
+      // Aanmeldingsformulier handler
       function handleSubmit(event) {
         event.preventDefault();
         const email = document.getElementById("email").value;
@@ -137,13 +119,6 @@
         msg.textContent = "Bedankt voor je aanmelding!";
         msg.style.color = "#a27d46";
         document.getElementById("signupForm").reset();
-
-        // Example Mailchimp / API hook placeholder:
-        // fetch("https://api.yourbackend.com/signup", {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/json" },
-        //   body: JSON.stringify({ email }),
-        // });
       }
 
       // Protect images from downloading
