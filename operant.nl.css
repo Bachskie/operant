@@ -177,6 +177,23 @@ body::before {
   pointer-events: none;
 }
 
+.hero-image {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.hero-image img {
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 8px 12px 30px rgba(0, 0, 0, 0.12), 3px 5px 15px rgba(0, 0, 0, 0.08);
+  filter: sepia(15%) contrast(1.05);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+}
+
 /* DRIE BLOKKEN */
 .three-blocks-section {
   padding: 6rem 5%;
@@ -314,11 +331,16 @@ body::before {
   align-items: center;
   justify-content: space-between;
   padding: 8rem 5%;
-  gap: 4rem;
+  gap: 6rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .section.reverse { flex-direction: row-reverse; }
+
+.section-text {
+  flex: 1;
+  max-width: 600px;
+}
 
 .section-text h2 {
   font-family: "Libre Baskerville", serif;
@@ -327,8 +349,15 @@ body::before {
   margin-bottom: 1rem;
 }
 
+.section-visual {
+  position: relative;
+  flex: 0 0 600px;
+}
+
 .section-visual img {
-    max-width: 400px;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
   border-radius: 6px;
   box-shadow: 6px 8px 30px rgba(0, 0, 0, 0.12), 2px 4px 15px rgba(0, 0, 0, 0.08);
   filter: sepia(25%) contrast(1.05);
@@ -337,10 +366,6 @@ body::before {
   -moz-user-select: none;
   -ms-user-select: none;
   pointer-events: none;
-}
-
-.section-visual {
-  position: relative;
 }
 
 .cycle-overlay {
@@ -603,6 +628,17 @@ body::before {
   }
 
   .hero-visual img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-image img {
     max-width: 100%;
     width: 100%;
     height: auto;

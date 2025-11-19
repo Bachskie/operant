@@ -34,198 +34,227 @@
     </header>
 
     <!-- DASHBOARD CONTAINER -->
-    <main class="dashboard-container">
-      <div class="dashboard-header">
-        <h1>Gedragsdashboard</h1>
-        <p class="dashboard-subtitle">Real-time inzichten in gedragspatronen en data-analyse</p>
+    <main class="dashboard-container coming-soon-container">
+      <!-- Background: Full dashboard preview with blur/opacity -->
+      <div class="dashboard-preview-background">
+        <!-- METRICS GRID -->
+        <section class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-icon">
+              <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="35" fill="none" stroke="#a27d46" stroke-width="3"/>
+                <path d="M 30 50 L 45 65 L 70 35" fill="none" stroke="#a27d46" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="metric-content">
+              <h3 class="metric-value">87</h3>
+              <p class="metric-label">Interventie Succesrate (%)</p>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon">
+              <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="60" width="15" height="30" fill="#a27d46" opacity="0.6"/>
+                <rect x="42.5" y="40" width="15" height="50" fill="#a27d46" opacity="0.8"/>
+                <rect x="65" y="25" width="15" height="65" fill="#a27d46"/>
+              </svg>
+            </div>
+            <div class="metric-content">
+              <h3 class="metric-value">12.453</h3>
+              <p class="metric-label">Gedragspatronen Gedetecteerd</p>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon">
+              <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="30" fill="none" stroke="#a27d46" stroke-width="3"/>
+                <circle cx="35" cy="40" r="5" fill="#a27d46"/>
+                <circle cx="65" cy="40" r="5" fill="#a27d46"/>
+                <circle cx="50" cy="60" r="5" fill="#a27d46"/>
+                <line x1="35" y1="40" x2="65" y2="40" stroke="#a27d46" stroke-width="2"/>
+                <line x1="35" y1="40" x2="50" y2="60" stroke="#a27d46" stroke-width="2"/>
+                <line x1="65" y1="40" x2="50" y2="60" stroke="#a27d46" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="metric-content">
+              <h3 class="metric-value">2.847</h3>
+              <p class="metric-label">Actieve Gebruikers</p>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon">
+              <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="35" fill="none" stroke="#a27d46" stroke-width="3" stroke-dasharray="220" stroke-dashoffset="55">
+                  <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="50" cy="50" r="8" fill="#a27d46"/>
+              </svg>
+            </div>
+            <div class="metric-content">
+              <h3 class="metric-value">94</h3>
+              <p class="metric-label">AI Model Nauwkeurigheid (%)</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CHARTS SECTION -->
+        <section class="charts-section">
+          <div class="chart-card large">
+            <h2 class="chart-title">Gedragsverandering Over Tijd</h2>
+            <div class="chart-container">
+              <svg class="behavior-chart" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+                <line x1="50" y1="250" x2="550" y2="250" stroke="#d4cdb8" stroke-width="1"/>
+                <line x1="50" y1="200" x2="550" y2="200" stroke="#d4cdb8" stroke-width="1" stroke-dasharray="4,4"/>
+                <line x1="50" y1="150" x2="550" y2="150" stroke="#d4cdb8" stroke-width="1" stroke-dasharray="4,4"/>
+                <line x1="50" y1="100" x2="550" y2="100" stroke="#d4cdb8" stroke-width="1" stroke-dasharray="4,4"/>
+                <line x1="50" y1="50" x2="550" y2="50" stroke="#d4cdb8" stroke-width="1" stroke-dasharray="4,4"/>
+                <line x1="50" y1="20" x2="50" y2="250" stroke="#d4cdb8" stroke-width="1"/>
+                
+                <polyline points="50,220 100,200 150,180 200,160 250,140 300,120 350,100 400,85 450,75 500,65 550,55" fill="none" stroke="#a27d46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <circle cx="50" cy="220" r="4" fill="#a27d46"/>
+                <circle cx="100" cy="200" r="4" fill="#a27d46"/>
+                <circle cx="150" cy="180" r="4" fill="#a27d46"/>
+                <circle cx="200" cy="160" r="4" fill="#a27d46"/>
+                <circle cx="250" cy="140" r="4" fill="#a27d46"/>
+                <circle cx="300" cy="120" r="4" fill="#a27d46"/>
+                <circle cx="350" cy="100" r="4" fill="#a27d46"/>
+                <circle cx="400" cy="85" r="4" fill="#a27d46"/>
+                <circle cx="450" cy="75" r="4" fill="#a27d46"/>
+                <circle cx="500" cy="65" r="4" fill="#a27d46"/>
+                <circle cx="550" cy="55" r="4" fill="#a27d46"/>
+                
+                <text x="50" y="270" text-anchor="middle" font-size="12" fill="#4a4a4a">Week 1</text>
+                <text x="200" y="270" text-anchor="middle" font-size="12" fill="#4a4a4a">Week 4</text>
+                <text x="350" y="270" text-anchor="middle" font-size="12" fill="#4a4a4a">Week 7</text>
+                <text x="500" y="270" text-anchor="middle" font-size="12" fill="#4a4a4a">Week 10</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h2 class="chart-title">Gedragscategorieën</h2>
+            <div class="category-list">
+              <div class="category-item">
+                <div class="category-info">
+                  <span class="category-name">Besluitvorming</span>
+                  <span class="category-percentage">32%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 32%"></div>
+                </div>
+              </div>
+              <div class="category-item">
+                <div class="category-info">
+                  <span class="category-name">Aandacht & Focus</span>
+                  <span class="category-percentage">28%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 28%"></div>
+                </div>
+              </div>
+              <div class="category-item">
+                <div class="category-info">
+                  <span class="category-name">Gewoontevorming</span>
+                  <span class="category-percentage">24%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 24%"></div>
+                </div>
+              </div>
+              <div class="category-item">
+                <div class="category-info">
+                  <span class="category-name">Motivatie</span>
+                  <span class="category-percentage">16%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 16%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INSIGHTS SECTION -->
+        <section class="insights-section">
+          <h2 class="section-title">Recente Inzichten</h2>
+          <div class="insights-grid">
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-date">Vandaag, 14:23</span>
+                <span class="insight-badge positive">Positief</span>
+              </div>
+              <p class="insight-text">
+                Gebruikers vertonen 23% meer betrokkenheid na implementatie van de nieuwe nudge-interventie.
+              </p>
+            </div>
+            
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-date">Gisteren, 09:15</span>
+                <span class="insight-badge neutral">Neutraal</span>
+              </div>
+              <p class="insight-text">
+                AI-model heeft 847 nieuwe gedragspatronen geïdentificeerd in de dataset van afgelopen week.
+              </p>
+            </div>
+            
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-date">2 dagen geleden</span>
+                <span class="insight-badge attention">Aandacht</span>
+              </div>
+              <p class="insight-text">
+                Daling van 12% in gewenst gedrag gedetecteerd in segment B. Aanbevolen om interventie aan te passen.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <!-- METRICS GRID -->
-      <section class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-icon">
-            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="35" fill="none" stroke="#a27d46" stroke-width="3"/>
-              <path d="M 30 50 L 45 65 L 70 35" fill="none" stroke="#a27d46" stroke-width="4" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="metric-content">
-            <h3 class="metric-value" data-target="87">0</h3>
-            <p class="metric-label">Interventie Succesrate (%)</p>
-          </div>
+      <!-- Coming Soon Overlay -->
+      <div class="coming-soon-content">
+        <div class="coming-soon-icon">
+          <svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#a27d46" stroke-width="2" opacity="0.3"/>
+            <circle cx="50" cy="50" r="35" fill="none" stroke="#a27d46" stroke-width="2" opacity="0.5">
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="20s"
+                repeatCount="indefinite"/>
+            </circle>
+            <circle cx="50" cy="50" r="25" fill="none" stroke="#a27d46" stroke-width="3" opacity="0.7">
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="360 50 50"
+                to="0 50 50"
+                dur="15s"
+                repeatCount="indefinite"/>
+            </circle>
+            <rect x="25" y="25" width="50" height="50" fill="none" stroke="#a27d46" stroke-width="2" rx="4" opacity="0.4">
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="25s"
+                repeatCount="indefinite"/>
+            </rect>
+          </svg>
         </div>
-
-        <div class="metric-card">
-          <div class="metric-icon">
-            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <rect x="20" y="60" width="15" height="30" fill="#a27d46" opacity="0.6"/>
-              <rect x="42.5" y="40" width="15" height="50" fill="#a27d46" opacity="0.8"/>
-              <rect x="65" y="25" width="15" height="65" fill="#a27d46"/>
-            </svg>
-          </div>
-          <div class="metric-content">
-            <h3 class="metric-value" data-target="12453">0</h3>
-            <p class="metric-label">Gedragspatronen Gedetecteerd</p>
-          </div>
-        </div>
-
-        <div class="metric-card">
-          <div class="metric-icon">
-            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="30" fill="none" stroke="#a27d46" stroke-width="3"/>
-              <circle cx="35" cy="40" r="5" fill="#a27d46"/>
-              <circle cx="65" cy="40" r="5" fill="#a27d46"/>
-              <circle cx="50" cy="60" r="5" fill="#a27d46"/>
-              <line x1="35" y1="40" x2="65" y2="40" stroke="#a27d46" stroke-width="2"/>
-              <line x1="35" y1="40" x2="50" y2="60" stroke="#a27d46" stroke-width="2"/>
-              <line x1="65" y1="40" x2="50" y2="60" stroke="#a27d46" stroke-width="2"/>
-            </svg>
-          </div>
-          <div class="metric-content">
-            <h3 class="metric-value" data-target="2847">0</h3>
-            <p class="metric-label">Actieve Gebruikers</p>
-          </div>
-        </div>
-
-        <div class="metric-card">
-          <div class="metric-icon">
-            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="35" fill="none" stroke="#a27d46" stroke-width="3" stroke-dasharray="220" stroke-dashoffset="55">
-                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="3s" repeatCount="indefinite"/>
-              </circle>
-              <circle cx="50" cy="50" r="8" fill="#a27d46"/>
-            </svg>
-          </div>
-          <div class="metric-content">
-            <h3 class="metric-value" data-target="94">0</h3>
-            <p class="metric-label">AI Model Nauwkeurigheid (%)</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CHARTS SECTION -->
-      <section class="charts-section">
-        <div class="chart-card large">
-          <h2 class="chart-title">Gedragsverandering Over Tijd</h2>
-          <div class="chart-container">
-            <svg class="behavior-chart" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-              <!-- Grid lines -->
-              <line x1="50" y1="250" x2="550" y2="250" stroke="#d4cdb8" stroke-width="1"/>
-              <line x1="50" y1="200" x2="550" y2="200" stroke="#d4cdb8" stroke-width="1" stroke-dasharray="4,4"/>
-              <line x1="50" y1="150" x2="550" y2="150" stroke="#d4cdb8" stroke-width="1" stroke-dasharray="4,4"/>
-              <line x1="50" y1="100" x2="550" y2="100" stroke="#d4cdb8" stroke-width="1" stroke-dasharray="4,4"/>
-              <line x1="50" y1="50" x2="550" y2="50" stroke="#d4cdb8" stroke-width="1" stroke-dasharray="4,4"/>
-              <line x1="50" y1="20" x2="50" y2="250" stroke="#d4cdb8" stroke-width="1"/>
-              
-              <!-- Data line -->
-              <polyline
-                points="50,220 100,200 150,180 200,160 250,140 300,120 350,100 400,85 450,75 500,65 550,55"
-                fill="none"
-                stroke="#a27d46"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-              
-              <!-- Data points -->
-              <circle cx="50" cy="220" r="4" fill="#a27d46"/>
-              <circle cx="100" cy="200" r="4" fill="#a27d46"/>
-              <circle cx="150" cy="180" r="4" fill="#a27d46"/>
-              <circle cx="200" cy="160" r="4" fill="#a27d46"/>
-              <circle cx="250" cy="140" r="4" fill="#a27d46"/>
-              <circle cx="300" cy="120" r="4" fill="#a27d46"/>
-              <circle cx="350" cy="100" r="4" fill="#a27d46"/>
-              <circle cx="400" cy="85" r="4" fill="#a27d46"/>
-              <circle cx="450" cy="75" r="4" fill="#a27d46"/>
-              <circle cx="500" cy="65" r="4" fill="#a27d46"/>
-              <circle cx="550" cy="55" r="4" fill="#a27d46"/>
-              
-              <!-- Labels -->
-              <text x="50" y="270" text-anchor="middle" font-size="12" fill="#4a4a4a">Week 1</text>
-              <text x="200" y="270" text-anchor="middle" font-size="12" fill="#4a4a4a">Week 4</text>
-              <text x="350" y="270" text-anchor="middle" font-size="12" fill="#4a4a4a">Week 7</text>
-              <text x="500" y="270" text-anchor="middle" font-size="12" fill="#4a4a4a">Week 10</text>
-            </svg>
-          </div>
-        </div>
-
-        <div class="chart-card">
-          <h2 class="chart-title">Gedragscategorieën</h2>
-          <div class="category-list">
-            <div class="category-item">
-              <div class="category-info">
-                <span class="category-name">Besluitvorming</span>
-                <span class="category-percentage">32%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 32%"></div>
-              </div>
-            </div>
-            <div class="category-item">
-              <div class="category-info">
-                <span class="category-name">Aandacht & Focus</span>
-                <span class="category-percentage">28%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 28%"></div>
-              </div>
-            </div>
-            <div class="category-item">
-              <div class="category-info">
-                <span class="category-name">Gewoontevorming</span>
-                <span class="category-percentage">24%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 24%"></div>
-              </div>
-            </div>
-            <div class="category-item">
-              <div class="category-info">
-                <span class="category-name">Motivatie</span>
-                <span class="category-percentage">16%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 16%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- INSIGHTS SECTION -->
-      <section class="insights-section">
-        <h2 class="section-title">Recente Inzichten</h2>
-        <div class="insights-grid">
-          <div class="insight-card">
-            <div class="insight-header">
-              <span class="insight-date">Vandaag, 14:23</span>
-              <span class="insight-badge positive">Positief</span>
-            </div>
-            <p class="insight-text">
-              Gebruikers vertonen 23% meer betrokkenheid na implementatie van de nieuwe nudge-interventie.
-            </p>
-          </div>
-          
-          <div class="insight-card">
-            <div class="insight-header">
-              <span class="insight-date">Gisteren, 09:15</span>
-              <span class="insight-badge neutral">Neutraal</span>
-            </div>
-            <p class="insight-text">
-              AI-model heeft 847 nieuwe gedragspatronen geïdentificeerd in de dataset van afgelopen week.
-            </p>
-          </div>
-          
-          <div class="insight-card">
-            <div class="insight-header">
-              <span class="insight-date">2 dagen geleden</span>
-              <span class="insight-badge attention">Aandacht</span>
-            </div>
-            <p class="insight-text">
-              Daling van 12% in gewenst gedrag gedetecteerd in segment B. Aanbevolen om interventie aan te passen.
-            </p>
-          </div>
-        </div>
-      </section>
+        
+        <h1>Dashboard Komt Binnenkort</h1>
+        <p class="coming-soon-subtitle">
+          We bouwen een krachtig dashboard voor real-time gedragsinzichten en data-analyse.
+        </p>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -244,51 +273,6 @@
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = (scrollTop / scrollHeight) * 100;
         document.getElementById("scroll-bar").style.width = progress + "%";
-      });
-
-      // Animate metric counters
-      function animateCounter(element) {
-        const target = parseInt(element.getAttribute('data-target'));
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= target) {
-            element.textContent = target.toLocaleString('nl-NL');
-            clearInterval(timer);
-          } else {
-            element.textContent = Math.floor(current).toLocaleString('nl-NL');
-          }
-        }, 16);
-      }
-
-      // Trigger counter animation on page load
-      window.addEventListener('load', () => {
-        document.querySelectorAll('.metric-value').forEach(animateCounter);
-      });
-
-      // Animate progress bars on scroll
-      const observerOptions = {
-        threshold: 0.3,
-        rootMargin: '0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.metric-card, .chart-card, .insight-card').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
       });
     </script>
   </body>
