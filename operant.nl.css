@@ -465,8 +465,7 @@ body::before {
   }
 
   .section-visual img {
-    max-width: 100%;
-    width: 100%;
+    max-width: 350px;
   }
 
   .cta {
@@ -644,7 +643,7 @@ body::before {
   }
 
   .section-visual img {
-    max-width: 100%;
+    max-width: 320px;
     width: 100%;
     height: auto;
   }
