@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asch – Operant</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="operant.nl.css" />
+    <link rel="stylesheet" href="gedrag-gpt.css" />
+  </head>
+
+  <body>
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-bar"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#a27d46" stroke-width="4"/>
+          <text x="50%" y="58%" text-anchor="middle" font-family="Libre Baskerville" font-size="40" fill="#1c2c3c">O</text>
+        </svg><span>perant</span>
+      </div>
+      <nav class="nav">
+        <a href="operant.nl.html">Start</a>
+        <a href="missie.html">Missie</a>
+        <a href="wetenschap.html">Wetenschap</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- GEDRAG GPT CONTAINER -->
+    <main class="gpt-container">
+      <div class="gpt-header">
+        <h1>Asch</h1>
+        <p class="gpt-subtitle">Jouw slimme assistent voor gedragsinzichten en praktisch advies</p>
+      </div>
+
+      <!-- CHAT INTERFACE -->
+      <section class="chat-section">
+        <div class="chat-window" id="chatWindow">
+          <div class="chat-message assistant">
+            <div class="message-avatar">
+              <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#a27d46" opacity="0.2"/>
+                <circle cx="50" cy="50" r="30" fill="none" stroke="#a27d46" stroke-width="3"/>
+                <circle cx="35" cy="45" r="4" fill="#a27d46"/>
+                <circle cx="65" cy="45" r="4" fill="#a27d46"/>
+                <path d="M 35 60 Q 50 70 65 60" fill="none" stroke="#a27d46" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="message-content">
+              <p>Hallo! Ik ben Asch, jouw slimme assistent gespecialiseerd in gedragswetenschap.</p>
+              <p><strong>Deze feature is bijna klaar!</strong> Binnenkort kan ik je helpen met:</p>
+              <ul>
+                <li>Gedragspatronen analyseren</li>
+                <li>Interventies ontwerpen</li>
+                <li>Data-gedreven inzichten genereren</li>
+                <li>Nudging strategieën ontwikkelen</li>
+              </ul>
+              <p>De API-verbinding wordt momenteel geïmplementeerd. Check binnenkort terug!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-input-container">
+          <div class="suggested-prompts" id="suggestedPrompts">
+            <button class="prompt-chip" data-prompt="Hoe kan ik gewoontevorming stimuleren?">
+              Gewoontevorming stimuleren
+            </button>
+            <button class="prompt-chip" data-prompt="Wat zijn effectieve nudges voor besluitvorming?">
+              Effectieve nudges
+            </button>
+            <button class="prompt-chip" data-prompt="Hoe meet ik gedragsverandering?">
+              Gedragsverandering meten
+            </button>
+            <button class="prompt-chip" data-prompt="Geef me voorbeelden van succesvolle interventies">
+              Succesvolle interventies
+            </button>
+          </div>
+
+          <form class="chat-input-form" id="chatForm">
+            <input 
+              type="text" 
+              id="chatInput" 
+              placeholder="Binnenkort beschikbaar - API wordt geïmplementeerd..."
+              autocomplete="off"
+              disabled
+              required
+            />
+            <button type="submit" id="sendButton" disabled>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 8L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+
+          <div class="api-status" id="apiStatus">
+            <span class="status-indicator"></span>
+            <span class="status-text">API Verbonden</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES INFO -->
+      <section class="features-section">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="35" fill="none" stroke="#a27d46" stroke-width="3"/>
+              <path d="M 30 50 L 45 65 L 70 35" fill="none" stroke="#a27d46" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Evidence-Based</h3>
+          <p>Getraind op gedragswetenschappelijke literatuur en best practices</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="30" fill="none" stroke="#a27d46" stroke-width="3"/>
+              <circle cx="35" cy="45" r="3" fill="#a27d46"/>
+              <circle cx="65" cy="45" r="3" fill="#a27d46"/>
+              <circle cx="50" cy="60" r="3" fill="#a27d46"/>
+              <line x1="35" y1="45" x2="50" y2="60" stroke="#a27d46" stroke-width="2"/>
+              <line x1="65" y1="45" x2="50" y2="60" stroke="#a27d46" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Real-time Analyse</h3>
+          <p>Directe feedback op gedragsdata en interventievoorstellen</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="25" width="50" height="50" fill="none" stroke="#a27d46" stroke-width="3" rx="4"/>
+              <line x1="40" y1="45" x2="60" y2="45" stroke="#a27d46" stroke-width="2"/>
+              <line x1="40" y1="55" x2="60" y2="55" stroke="#a27d46" stroke-width="2"/>
+              <line x1="40" y1="65" x2="55" y2="65" stroke="#a27d46" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Praktisch Advies</h3>
+          <p>Concrete aanbevelingen die direct toepasbaar zijn</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© <span id="year"></span> Operant — Gedrag begrijpen. Resultaten maken.</p>
+      <p><a href="mailto:info@operant.nl">info@operant.nl</a></p>
+    </footer>
+
+    <script>
+      // Update year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Scroll progress bar
+      window.addEventListener("scroll", () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        document.getElementById("scroll-bar").style.width = progress + "%";
+      });
+
+      // Chat functionality
+      const chatWindow = document.getElementById('chatWindow');
+      const chatForm = document.getElementById('chatForm');
+      const chatInput = document.getElementById('chatInput');
+      const sendButton = document.getElementById('sendButton');
+      const apiStatus = document.getElementById('apiStatus');
+      const suggestedPrompts = document.getElementById('suggestedPrompts');
+
+      // API Configuration (replace with your actual API endpoint)
+      const API_ENDPOINT = 'YOUR_API_ENDPOINT_HERE'; // e.g., 'https://api.openai.com/v1/chat/completions'
+      const API_KEY = 'YOUR_API_KEY_HERE';
+
+      // Handle suggested prompts
+      document.querySelectorAll('.prompt-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          chatInput.value = chip.dataset.prompt;
+          chatInput.focus();
+        });
+      });
+
+      // Add message to chat
+      function addMessage(content, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${isUser ? 'user' : 'assistant'}`;
+        
+        if (!isUser) {
+          messageDiv.innerHTML = `
+            <div class="message-avatar">
+              <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#a27d46" opacity="0.2"/>
+                <circle cx="50" cy="50" r="30" fill="none" stroke="#a27d46" stroke-width="3"/>
+                <circle cx="35" cy="45" r="4" fill="#a27d46"/>
+                <circle cx="65" cy="45" r="4" fill="#a27d46"/>
+                <path d="M 35 60 Q 50 70 65 60" fill="none" stroke="#a27d46" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="message-content">
+              <p>${content}</p>
+            </div>
+          `;
+        } else {
+          messageDiv.innerHTML = `
+            <div class="message-content">
+              <p>${content}</p>
+            </div>
+          `;
+        }
+        
+        chatWindow.appendChild(messageDiv);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      // Show typing indicator
+      function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'chat-message assistant typing-indicator';
+        typingDiv.id = 'typingIndicator';
+        typingDiv.innerHTML = `
+          <div class="message-avatar">
+            <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="45" fill="#a27d46" opacity="0.2"/>
+              <circle cx="50" cy="50" r="30" fill="none" stroke="#a27d46" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="message-content">
+            <div class="typing-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        `;
+        chatWindow.appendChild(typingDiv);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        const indicator = document.getElementById('typingIndicator');
+        if (indicator) indicator.remove();
+      }
+
+      // API Call (placeholder - implement your actual API integration)
+      async function sendToAPI(message) {
+        // DEMO MODE: Return simulated responses
+        // Replace this with actual API call when you have credentials
+        
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            const responses = [
+              "Interessante vraag! Gedragsverandering werkt het beste wanneer je werkt met kleine, haalbare stappen. Begin met het identificeren van de gewenste gedragsverandering en analyseer wat mensen momenteel tegenhoudt.",
+              "Op basis van gedragswetenschappelijk onderzoek adviseer ik om te focussen op context-verandering in plaats van alleen motivatie. Nudges zoals default opties, social proof, en tijdige reminders zijn bewezen effectief.",
+              "Laten we dit stap voor stap benaderen. Eerst moeten we de baseline meten, dan een interventie ontwerpen, en tenslotte de impact evalueren. Welk aspect wil je verder uitdiepen?",
+              "Een goede interventie combineert inzicht in intrinsieke motivatie met praktische barrières. Ik raad aan om te beginnen met gebruikersinterviews om de échte obstakels te identificeren.",
+              "Data laat zien dat gedragsverandering het meest duurzaam is wanneer je werkt met gewoontevorming. Overweeg om een habit loop te ontwerpen: cue → routine → reward."
+            ];
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            resolve(randomResponse);
+          }, 1500);
+        });
+
+        /* ACTUAL API IMPLEMENTATION (uncomment and configure when ready):
+        
+        try {
+          const response = await fetch(API_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${API_KEY}`
+            },
+            body: JSON.stringify({
+              model: 'gpt-4', // or your preferred model
+              messages: [
+                {
+                  role: 'system',
+                  content: 'Je bent een expert in gedragswetenschap en helpt gebruikers met evidence-based advies over gedragsverandering, interventies, en data-analyse. Geef altijd praktische, concrete aanbevelingen gebaseerd op wetenschappelijk onderzoek.'
+                },
+                {
+                  role: 'user',
+                  content: message
+                }
+              ],
+              temperature: 0.7,
+              max_tokens: 500
+            })
+          });
+
+          const data = await response.json();
+          return data.choices[0].message.content;
+        } catch (error) {
+          console.error('API Error:', error);
+          updateAPIStatus(false);
+          throw new Error('Er is een fout opgetreden bij het verbinden met de API.');
+        }
+        */
+      }
+
+      // Update API status indicator
+      function updateAPIStatus(isConnected) {
+        const indicator = apiStatus.querySelector('.status-indicator');
+        const text = apiStatus.querySelector('.status-text');
+        
+        if (isConnected) {
+          indicator.style.backgroundColor = '#4caf50';
+          text.textContent = 'API Verbonden';
+        } else {
+          indicator.style.backgroundColor = '#ff9800';
+          text.textContent = 'Binnenkort Beschikbaar';
+        }
+      }
+
+      // Handle form submission
+      chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const message = chatInput.value.trim();
+        if (!message) return;
+
+        // Hide suggested prompts after first message
+        suggestedPrompts.style.display = 'none';
+
+        // Add user message
+        addMessage(message, true);
+        chatInput.value = '';
+        
+        // Disable input while processing
+        chatInput.disabled = true;
+        sendButton.disabled = true;
+
+        // Show typing indicator
+        showTypingIndicator();
+
+        try {
+          // Get response from API
+          const response = await sendToAPI(message);
+          
+          // Remove typing indicator and show response
+          removeTypingIndicator();
+          addMessage(response);
+          
+        } catch (error) {
+          removeTypingIndicator();
+          addMessage('Sorry, er is een fout opgetreden. Probeer het later opnieuw.');
+        } finally {
+          // Re-enable input
+          chatInput.disabled = false;
+          sendButton.disabled = false;
+          chatInput.focus();
+        }
+      });
+
+      // Initialize API status (set to false - not connected yet)
+      updateAPIStatus(false);
+    </script>
+  </body>
+</html>

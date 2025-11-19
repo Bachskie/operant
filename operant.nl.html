@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operant – Behaviour to Data, Data to Behaviour</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="operant.nl.css" />
+  </head>
+
+  <body>
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-bar"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#a27d46" stroke-width="4"/>
+          <text x="50%" y="58%" text-anchor="middle" font-family="Libre Baskerville" font-size="40" fill="#1c2c3c">O</text>
+        </svg><span>perant</span>
+      </div>
+      <nav class="nav">
+        <a href="missie.html">Missie</a>
+        <a href="wetenschap.html">Wetenschap</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="gedrag-gpt.html">Asch</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Behaviour to Data
+          Data to Behaviour
+        </h1>
+        <p>
+          Operant vertaalt wat mensen doen in bruikbare inzichten, en zet die inzichten om in actie.
+          We helpen organisaties gedragspatronen te doorgronden en mensen naar gewenste resultaten te leiden.
+        </p>
+        <button class="cta-btn" onclick="document.getElementById('signup').scrollIntoView({behavior:'smooth'})">
+          Meld je aan voor de wachtlijst
+        </button>
+      </div>
+      <div class="hero-visual">
+        <svg class="hero-figure" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Buitenste cirkel -->
+          <circle cx="100" cy="100" r="85" fill="none" stroke="#a27d46" stroke-width="1.5" opacity="0.25"/>
+          
+          <!-- Middelste cirkel met rotatie -->
+          <circle cx="100" cy="100" r="60" fill="none" stroke="#a27d46" stroke-width="1.5" opacity="0.35">
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              from="0 100 100"
+              to="360 100 100"
+              dur="40s"
+              repeatCount="indefinite"/>
+          </circle>
+          
+          <!-- Binnenste cirkel met pulsatie -->
+          <circle cx="100" cy="100" r="35" fill="none" stroke="#a27d46" stroke-width="2" opacity="0.45">
+            <animate attributeName="r" values="35;38;35" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.4;0.6;0.4" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          
+          <!-- Data punten met orbit -->
+          <g opacity="0.5">
+            <circle cx="100" cy="40" r="3" fill="#a27d46">
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 100 100"
+                to="360 100 100"
+                dur="25s"
+                repeatCount="indefinite"/>
+            </circle>
+            <circle cx="160" cy="100" r="3" fill="#a27d46">
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="120 100 100"
+                to="480 100 100"
+                dur="25s"
+                repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="160" r="3" fill="#a27d46">
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="240 100 100"
+                to="600 100 100"
+                dur="25s"
+                repeatCount="indefinite"/>
+            </circle>
+          </g>
+          
+          <!-- Centrum punt -->
+          <circle cx="100" cy="100" r="5" fill="#a27d46" opacity="0.6">
+            <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <img src="1.jpg" alt="Behavioral science and AI" />
+      </div>
+    </section>
+
+    <!-- DRIE BLOKKEN: INZICHTEN, INTERVENTIE, EVALUATIE -->
+    <section class="three-blocks-section">
+      <div class="block-container">
+        <div class="info-block">
+          <div class="block-content">
+            <h3 class="block-title">Inzichten</h3>
+            <p class="block-detail">
+              We analyseren gedragspatronen en data om te begrijpen waarom mensen bepaalde keuzes maken. 
+              Dit vormt de basis voor elke effectieve interventie.
+            </p>
+          </div>
+          <svg class="block-figure" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4">
+              <animate attributeName="r" values="15;18;15" dur="4s" repeatCount="indefinite"/>
+            </circle>
+            <line x1="50" y1="25" x2="50" y2="15" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <line x1="50" y1="75" x2="50" y2="85" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <line x1="25" y1="50" x2="15" y2="50" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <line x1="75" y1="50" x2="85" y2="50" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+          </svg>
+        </div>
+        
+        <div class="info-block">
+          <div class="block-content">
+            <h3 class="block-title">Interventie</h3>
+            <p class="block-detail">
+              Op basis van inzichten ontwerpen we gerichte acties die gedrag sturen. 
+              Elke interventie is evidence-based en gericht op meetbare resultaten.
+            </p>
+          </div>
+          <svg class="block-figure" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 20 L70 50 L50 80 L30 50 Z" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <circle cx="50" cy="50" r="6" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+          </svg>
+        </div>
+        
+        <div class="info-block">
+          <div class="block-content">
+            <h3 class="block-title">Evaluatie</h3>
+            <p class="block-detail">
+              We meten de impact van interventies en leren van de resultaten. 
+              Deze cyclus zorgt voor continue verbetering en optimalisatie.
+            </p>
+          </div>
+          <svg class="block-figure" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5" stroke-dasharray="176">
+              <animate attributeName="stroke-dashoffset" values="0;176" dur="10s" repeatCount="indefinite"/>
+            </circle>
+            <path d="M50 22 L54 30 L46 30 Z" fill="currentColor" opacity="0.5">
+              <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+            </path>
+            <circle cx="50" cy="50" r="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4">
+              <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI EN GEDRAG -->
+    <section class="ai-section">
+      <svg class="ai-background" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#a27d46" stroke-width="0.5" opacity="0.08"/>
+          </pattern>
+        </defs>
+        <rect width="1200" height="400" fill="url(#grid)"/>
+        
+        <!-- Data nodes netwerk -->
+        <circle cx="200" cy="100" r="4" fill="#a27d46" opacity="0.15">
+          <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="450" cy="80" r="4" fill="#a27d46" opacity="0.15">
+          <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="600" cy="200" r="4" fill="#a27d46" opacity="0.15">
+          <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" begin="1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="900" cy="150" r="4" fill="#a27d46" opacity="0.15">
+          <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1000" cy="300" r="4" fill="#a27d46" opacity="0.15">
+          <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" begin="2s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Verbindingslijnen -->
+        <line x1="200" y1="100" x2="450" y2="80" stroke="#a27d46" stroke-width="0.8" opacity="0.08">
+          <animate attributeName="opacity" values="0.05;0.15;0.05" dur="5s" repeatCount="indefinite"/>
+        </line>
+        <line x1="450" y1="80" x2="600" y2="200" stroke="#a27d46" stroke-width="0.8" opacity="0.08">
+          <animate attributeName="opacity" values="0.05;0.15;0.05" dur="5s" begin="1s" repeatCount="indefinite"/>
+        </line>
+        <line x1="600" y1="200" x2="900" y2="150" stroke="#a27d46" stroke-width="0.8" opacity="0.08">
+          <animate attributeName="opacity" values="0.05;0.15;0.05" dur="5s" begin="2s" repeatCount="indefinite"/>
+        </line>
+        <line x1="900" y1="150" x2="1000" y2="300" stroke="#a27d46" stroke-width="0.8" opacity="0.08">
+          <animate attributeName="opacity" values="0.05;0.15;0.05" dur="5s" begin="3s" repeatCount="indefinite"/>
+        </line>
+      </svg>
+      
+      <div class="ai-content">
+        <h2>AI en Gedragswetenschap</h2>
+        <p>
+          Kunstmatige intelligentie en gedragswetenschap versterken elkaar. AI helpt ons 
+          patronen te herkennen in grote datasets die anders onzichtbaar blijven. 
+          Gedragswetenschap geeft richting aan hoe we die inzichten vertalen naar 
+          effectieve interventies. Samen creëren ze een krachtige combinatie: 
+          data-gedreven inzichten met menselijk begrip.
+        </p>
+      </div>
+    </section>
+
+    <!-- MISSIE -->
+    <section id="mission" class="section">
+      <div class="section-text">
+        <h2>Hoe We Het Doen</h2>
+        <p>
+          We combineren gedragspsychologie met data-analyse. Door gedrag meetbaar te maken 
+          en patronen op te sporen, helpen we organisaties hun doelgroepen beter te begrijpen 
+          en effectiever te bereiken. Dit is evidence-based resultaten maken.
+        </p>
+      </div>
+    </section>
+
+    <!-- WETENSCHAP -->
+    <section id="science" class="section reverse">
+      <div class="section-text">
+        <h2>De Cirkel: Meet, Leer, Verbeter</h2>
+        <p>
+          We observeren wat mensen doen, analyseren waarom ze het doen, en gebruiken die inzichten 
+          om interventies te ontwerpen die echt werken. Dit is geen gokken het is systematisch 
+          en meetbaar. Elke stap leert ons meer, elke stap werkt beter.
+        </p>
+      </div>
+      <div class="section-visual">
+        <img src="3.jpg" alt="Meet, Leer, Verbeter Cirkel" />
+        <svg class="cycle-overlay" width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="70" cy="70" r="60" fill="none" stroke="#a27d46" stroke-width="2" stroke-dasharray="5,5" opacity="0.4"/>
+          <path d="M 70 10 L 75 20 L 65 20 Z" fill="#a27d46" opacity="0.5">
+            <animateTransform attributeName="transform" type="rotate" from="0 70 70" to="360 70 70" dur="20s" repeatCount="indefinite"/>
+          </path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- CTA / AANMELDINGSFORMULIER -->
+    <section id="signup" class="cta">
+      <h2>Klaar om Gewenst Gedrag te Zien?</h2>
+      <p>
+        Ontvang praktische inzichten en tools om gedrag te begrijpen en resultaten te verbeteren.
+      </p>
+      <form
+        class="signup-form"
+        id="signupForm"
+        onsubmit="handleSubmit(event)"
+      >
+        <input type="email" id="email" placeholder="Voer je e-mailadres in" required />
+        <button type="submit">Aanmelden</button>
+      </form>
+      <p id="formMessage" class="form-message"></p>
+    </section>
+
+    <!-- VOETTEKST -->
+    <footer id="contact" class="footer">
+      <p>© <span id="year"></span> Operant — Gedrag begrijpen. Resultaten maken.</p>
+      <p><a href="mailto:info@operant.nl">info@operant.nl</a></p>
+    </footer>
+
+    <script>
+      // Update year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Scroll progress bar
+      window.addEventListener("scroll", () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        document.getElementById("scroll-bar").style.width = progress + "%";
+      });
+
+      // Aanmeldingsformulier handler
+      function handleSubmit(event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const msg = document.getElementById("formMessage");
+        msg.textContent = "Bedankt voor je aanmelding!";
+        msg.style.color = "#a27d46";
+        document.getElementById("signupForm").reset();
+      }
+
+      // Protect images from downloading
+      document.addEventListener('contextmenu', function(e) {
+        const imgs = document.querySelectorAll('img');
+        imgs.forEach(img => {
+          if (e.target === img || img.contains(e.target)) {
+            e.preventDefault();
+            return false;
+          }
+        });
+      });
+
+      // Disable drag and drop on images
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', function(e) {
+          e.preventDefault();
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
